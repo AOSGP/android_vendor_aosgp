@@ -305,14 +305,14 @@ LINEAGE_VERSION := aosgp-$(AOSGP_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 AOSGP_DISPLAY_VERSION := aosgp-$(AOSGP_VERSION)-$(shell date -u +%Y%m%d)-$(CM_BUILD)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.crdroid.version=$(AOSGP_DISPLAY_VERSION) \
+  ro.aosgp.version=$(AOSGP_DISPLAY_VERSION) \
   ro.modversion=$(AOSGP_DISPLAY_VERSION)
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
   vendor/cm/build/target/product/security/lineage
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.crdroid.display.version=$(AOSGP_DISPLAY_VERSION)
+  ro.aosgp.display.version=$(AOSGP_DISPLAY_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/cm/config/partner_gms.mk
